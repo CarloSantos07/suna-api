@@ -4,7 +4,6 @@ class CreateNotes < ActiveRecord::Migration[6.0]
       t.string :employee
       t.integer :type
       t.text :body
-      # t.references :team, null: false, foreign_key: true
       t.references :stand_up, foreign_key: true, type: :string
 
       t.timestamps
