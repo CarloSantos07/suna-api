@@ -4,7 +4,8 @@ class CreateStandUps < ActiveRecord::Migration[6.0]
       t.string :id, :limit => 36, :primary_key => true
       t.datetime :date
       t.string :scrum_master
-      t.string :team
+      # t.string :team
+      t.string :pod_id
 
       t.timestamps
     end

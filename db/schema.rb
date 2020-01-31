@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_01_23_200733) do
   create_table "stand_ups", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "date"
     t.string "scrum_master"
-    t.string "team"
+    t.string "pod_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
