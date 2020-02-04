@@ -1,18 +1,19 @@
 class StandUp < ApplicationRecord
-belongs_to :team
-has_many :notes, class_name: "note", foreign_key: "reference_id"
-# has_many :notes, through: :team
 
-# put validations here
-before_validation :set_uuid, on: :create
-validates :id, presence: true, length: { maximum: 36 }, uuid: true
+  belongs_to :team
+  has_many :notes, class_name: "note", foreign_key: "reference_id"
+  # has_many :notes, through: :team
 
-  def set_uuid
-    self.id = SecureRandom.uuid
-  end
+  before_validation :set_uuid, on: :create
+  # validate :id, presence: true, length: { maximum: 36 }, uuid: true
+  validates :id, presence: true, length: { maximum: 36 }
 
-validates :date, presence: true
-validates :scrum_master, presence: true
-validates :team, presence: true
+    def set_uuid
+      self.id = SecureRandom.uuid
+    end
+
+  validates :date, presence: true
+  validates :scrum_master, presence: true
+  validates :pod_id, presence: true
 
 end
