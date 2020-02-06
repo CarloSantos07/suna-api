@@ -18,7 +18,6 @@ RSpec.describe StandUp, type: :model do
     it 'verify the presence of a date' do
       expect(stand.date).not_to be_nil
       expect(stand.date).not_to be_blank
-      # expect(stand.date).to equal(Time.current)
     end
 
     it 'verify the presence of a scrum master' do
