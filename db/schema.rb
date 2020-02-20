@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_222631) do
+ActiveRecord::Schema.define(version: 2020_02_19_221632) do
 
   create_table "notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "employee"
     t.integer "kind"
     t.text "body"
-    t.string "stand_up_id_id"
+    t.string "stand_up_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["stand_up_id_id"], name: "index_notes_on_stand_up_id_id"
+    t.index ["stand_up_id"], name: "index_notes_on_stand_up_id"
   end
 
   create_table "stand_ups", id: :string, limit: 36, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
