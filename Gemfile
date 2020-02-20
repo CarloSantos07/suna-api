@@ -38,6 +38,7 @@ group :development, :test do
   gem "shoulda-matchers", :require => false
   gem "shoulda", "~> 3.5"
   gem "factory_bot_rails"
+  # gem "activemodel", require: "active_model"
 end
 
 group :development do
@@ -45,6 +46,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
+  gem "pry-byebug"
+  gem "pry-rails"
+  gem "shoulda-matchers", :require => false
+  gem "shoulda", "~> 3.5"
+  gem "factory_bot_rails"
+  # gem "activemodel", require: "active_model"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
