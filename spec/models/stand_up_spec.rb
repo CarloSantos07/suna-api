@@ -3,7 +3,13 @@ require 'faker'
 
 RSpec.describe StandUp, type: :model do
   describe 'positive model spec tests' do
-    let!(:stand) { StandUp.new(id: SecureRandom.uuid, date: Time.now, scrum_master: 'Rich', pod_id: Faker::Hipster.word) }
+    # let!(:stand) { StandUp.new(id: SecureRandom.uuid, date: Time.now, scrum_master: 'Rich', pod_id: Faker::Hipster.word) }
+    # let!(:stand) { create(:stand_up) }
+
+    stand = FactoryBot.create(:stand_up)
+    
+    binding.pry
+    
 
     it 'verify the presence of id' do
       expect(stand.id).not_to be_empty
@@ -22,7 +28,7 @@ RSpec.describe StandUp, type: :model do
 
     it 'verify the presence of a scrum master' do
       expect(stand.scrum_master).not_to be_empty
-      expect(stand.scrum_master).to eq('Rich')
+      # expect(stand.scrum_master).to eq('Rich')
     end
 
     it 'verify the presence of a pod id' do
